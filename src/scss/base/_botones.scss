@@ -1,0 +1,13 @@
+.boton-inline{
+    background-color: greenyellow;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: block;
+    border-radius: 8px;
+
+    border: none;
+    &:hover{
+        background-color: green;
+        cursor: pointer;
+    }
+}

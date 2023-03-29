@@ -1,0 +1,156 @@
+// primer grid
+.pagina_carga{
+    display: grid;
+    grid-template-columns: 25% 30% 45%;
+    height: 95vh;
+    overflow: hidden;
+}
+.carga{
+    position: relative;
+    height: 3rem;
+    width: 8rem;
+    background-color:rgb(83, 126, 18) ;
+    border-radius: 8px;
+    display: grid;
+    place-content: center;
+    label{
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+    }
+    input{
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+       }
+       &:hover{
+        background-color: rgb(56, 87, 10);
+        cursor: pointer;
+    }
+   
+}
+.preview{
+    grid-column: 2/3;
+    width:100% ;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-left: 5px solid rgb(120, 231, 194);
+    border-right: 5px solid rgb(120, 231, 194);
+}
+.menu{
+    display: block;
+    justify-items: center;
+    grid-column: 1/2;
+
+    .alerta{
+        background-color: red;
+        color: white;
+        margin: 1rem;
+    }
+    .formulario{
+        display: grid;
+        place-items: center;
+        margin: 1rem;
+    }
+}
+.tabla_registros{
+    grid-column: 3/4;
+    margin-left: 2rem;
+    margin-top: 0;
+    height: 95vh;
+    width: 100%;
+    border-spacing: 0;
+    overflow: auto;
+    .pdftablet{
+        width: 100%;
+    }
+    thead{
+        background-color: rgb(69, 180, 69);
+        th{
+            color: white;
+            padding: 1rem;
+        }
+    }
+    tbody{
+        background-color: rgb(214, 234, 214);
+        td{
+            color: rgb(0, 0, 0);
+            padding: 1rem;
+            height: 1.5rem;
+        }
+        .elimnar_actualizar{
+            display: grid;
+            justify-items: center;
+            .boton-rojo-block{
+                width: 100%;
+                border: none;
+                display: block;
+                background-color: red;
+                color: white;
+                margin-bottom: 5px;
+                :hover{
+                    background-color: rgb(89, 11, 11);
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        .boton-verde-block{
+            padding: 3px;
+            border: none;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            background-color: rgb(3, 68, 34);
+            color: white;
+        }
+    }
+}
+.over{
+    z-index: 99;
+     position: fixed;
+     left: 0;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     display: grid;
+     place-items: center;
+     background-color: rgba(0, 0, 0, 0.535);
+   }
+   .modalaccion{
+    width: 40%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+   }
+   /* dimenciones de la imagen */
+    .over  picture{
+       display: block;
+       width: 40rem;
+       height: 40rem;
+       border-radius: 10px;
+    }
+    /* boton de cerrar la ventana modal */
+    .exit{
+       width: 4rem;
+       height: 4rem;
+       border-radius: 50%;
+       background-color: white;
+       color: black;
+       font-weight: 9000;
+       display: grid;
+       place-items: center;
+    }
+    /* cursor al momento de pocicionarse en el boton para cerrar modal */
+    .exit:hover{
+        color: white;
+        background-color: red;
+       cursor: pointer  ;
+    }

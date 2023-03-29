@@ -1,0 +1,23 @@
+-- creacion de base de datos MYSQL
+
+CREATE SCHEMA `prueba_suntic` ;
+
+
+-- tabla de ususarios
+CREATE TABLE `prueba_suntic`.`user` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(60) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `rol` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+-- insert de usuario 
+INSERT INTO `prueba_suntic`.`user` (`id`, `email`, `password`) VALUES ('1', 'suntic@correo.com', '$2y$10$947SB1hkCfdr\\/5i8Mf1PZu\\/0EdIGluFVTcCFO1G88lt8oPS4O7iUG');
+
+-- tabla de archivos 
+CREATE TABLE `prueba_suntic`.`archivos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
